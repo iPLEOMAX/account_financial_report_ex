@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <!-- Modify the existing report to show line.label_with_analytic instead of line.label -->
+        <template id="account_financial_report.report_general_ledger_lines_extension" inherit_id="account_financial_report.report_general_ledger_lines">
+            <xpath expr="//t[@t-raw='line.label']" position="replace">
+                <t t-raw="line.label_with_analytic"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>
